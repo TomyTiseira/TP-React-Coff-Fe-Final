@@ -7,8 +7,7 @@ const CartWidget = () => {
 	<Link to="/cart">
 		<img src={carrito} alt="Carrito" width="40" height="40"/>
 	</Link>
-    
-  )
+  );
 }
 
 export default CartWidget;

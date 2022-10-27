@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Item from "./Item";
-import { collection, getDocs, getFirestore, query, where} from "firebase/firestore";
 
 const ItemList = ({data = []}) => {
 	
-
+	// Cards de los productos.
 	const cardsProductos = data.map(film => {
-                return(
-                <div key={film.id} className='box-grid text-center bg'>
-                    <Item info={film}/>
-                </div>);
-            });
+		return(
+		<div key={film.id} className='box-grid text-center bg'>
+			<Item info={film}/>
+		</div>);
+	});
 
 	return (
 		<div className="grid-container">

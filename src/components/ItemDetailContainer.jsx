@@ -8,10 +8,11 @@ const ItemDetailContainer = () => {
 	const [data, setData] = useState({});
 	const { detalleId } = useParams();
 
+	// Recuperar el producto con el id
 	useEffect(() => {
 		const querydb = getFirestore();
 		const queryDoc = doc(querydb, "items", detalleId);
-		getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
+		getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data()}));
 	}, [detalleId]);
 
 	return (

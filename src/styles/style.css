@@ -54,30 +54,30 @@ body {
     margin-bottom: 0.5rem;
 }
 
-#menu, #detalle, #carrito {
+#menu, #detalle, #carrito, #checkout {
     padding: 1.25rem 7%;
 }
 
-#menu .box-grid div, #detalle .box-grid div, #carrito .box-grid div {
+#menu .box-grid div, #detalle .box-grid div, #carrito .box-grid div, #checkout .box-grid div {
     color: #fff;
     padding: 0.5rem;
 }
 
-#menu .box-grid img, #detalle .box-grid img, #carrito .box-grid img {
+#menu .box-grid img, #detalle .box-grid img, #carrito .box-grid img, #checkout .box-grid img {
     border-radius: 50%;
     height: 100px;
     width: 100px; 
 }
 
-#menu .box-grid h3, #detalle .box-grid h3, #carrito .box-grid h3 {
+#menu .box-grid h3, #detalle .box-grid h3, #carrito .box-grid h3, #checkout .box-grid h3 {
     color: #fff; 
 }
 
-#detalle .box-grid h3 span, #detalle .box-grid div span, #carrito .box-grid div span {
+#detalle .box-grid h3 span, #detalle .box-grid div span, #carrito .box-grid div span, #checkout .box-grid div span {
     font-size: small;
 }
 
-#menu h2, #detalle h2, #carrito h2 {
+#menu h2, #detalle h2, #carrito h2, #checkout h2 {
     color: #fffacd;
     text-align: center;
     font-size: 50px;

@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
 	const [count, setCount] = useState(parseInt(initial));
+
+	// Decrementar la cantidad del producto.
 	const decrease = () => {
 		setCount(count - 1);
 	};
 
+	// Incrementar la cantidad del producto.
 	const increase = () => {
 		setCount(count + 1);
 	};
 
+	// Establecer el contador en el valor inicial recibido.
 	useEffect(() => {
 		setCount(parseInt(initial));
 	}, [initial]);
