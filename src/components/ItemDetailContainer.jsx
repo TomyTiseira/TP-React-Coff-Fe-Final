@@ -6,14 +6,14 @@ import Title from "./Title";
 
 const ItemDetailContainer = () => {
 	const [data, setData] = useState({});
-	const { detalleId } = useParams();
+	const { itemId } = useParams();
 
 	// Recuperar el producto con el id
 	useEffect(() => {
 		const querydb = getFirestore();
-		const queryDoc = doc(querydb, "items", detalleId);
+		const queryDoc = doc(querydb, "items", itemId);
 		getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data()}));
-	}, [detalleId]);
+	}, [itemId]);
 
 	return (
 	<div id="detalle">
