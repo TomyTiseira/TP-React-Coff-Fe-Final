@@ -29,7 +29,7 @@ export const ItemDetail = ({ data }) => {
 			<h3 className="fs-5 py-2 col">{data.nombre}</h3>
 			<div className="fs-6">Descripción: <span>{data.descripcion}</span></div>
 			{goToCart ? (
-				<Link to="/cart" className="text-white fs-4"> Terminar al carrito</Link>
+				<Link to="/cart" className="text-white fs-4">Ir al carrito</Link>
 			) : (
 				<ItemCount initial={1} stock={5} onAdd={onAdd}/>
 			)}
