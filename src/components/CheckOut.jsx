@@ -112,7 +112,7 @@ const CheckOut = () => {
                 <div className='grid-container border border-white p-4'>
                     {cardsProductos}
                     <p className="text-p m-auto bg px-5 py-3 fs-5">Total: <span className="fs-6">${totalPrice()}</span></p>
-                    <Link to="/" className='m-auto'><button onClick={handleClick} className="boton-a">Confirmar</button></Link>
+                    <Link to="/" className='my-auto'><button onClick={handleClick} className="boton-a">Confirmar</button></Link>
                 </div>) 
                 : 
                 (<form className='form-container m-auto'>
@@ -150,7 +150,7 @@ const CheckOut = () => {
                             <input type="text" name="emailCopy" placeholder='coff-fe@example.com' onChange={handleOnChangeEmailCopy}/>
                         </label>
                     </div>
-                    <input type="submit" value="Submit" className='boton-a mb-4' onClick={handleSubmit}/>
+                    <input type="submit" value="Confirmar datos" className='boton-a mb-4' onClick={handleSubmit}/>
                 </form>)} 
         </div>
     );

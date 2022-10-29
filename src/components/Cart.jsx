@@ -25,7 +25,7 @@ const Cart = () => {
 					<ItemCart key={product.id} product={product}/>
 				))}
 				<p className="text-p m-auto bg px-5 py-3 fs-5">Total: <span className="fs-6">${totalPrice()}</span></p>
-				<Link to="/checkout"><button className="boton-a m-auto">Emitir compra</button></Link>
+				<Link to="/checkout" className="my-auto"><button className="boton-a">Emitir compra</button></Link>
 			</div>
 		</div>
 	);
