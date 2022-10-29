@@ -112,6 +112,34 @@ background-color: #fffacd;
     margin-bottom: 0.7rem;
 }
 
+.form-container {
+    /* flex: 1 1 45rem; */
+    width: 50vw;
+    margin: 1rem;
+}
+
+.inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border:0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.inputBox label {
+    color:#fff;
+    font-size: 1.3rem;
+    padding-left: 3rem;
+}
+
+.inputBox input {
+    margin: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    text-transform: none;
+}
+
 @media (min-width: 992px) {
     #menu {
         margin: 2rem 5rem 0 5rem;

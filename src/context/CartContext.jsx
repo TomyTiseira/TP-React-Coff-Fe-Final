@@ -6,7 +6,6 @@ export const useCartContext = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
 	const [cart, setCart] = useState([]);
-	const [copyCart, setCopyCart] = useState([]);
 
 	const addProduct = (item, quantity) => {
 		if (isInCart(item.id)) {
@@ -32,12 +31,6 @@ const CartProvider = ({ children }) => {
 
 	const removeProduct = (id) => setCart(cart.filter((product) => product.id !== id));
 
-	const completeCartCopy = (cart) => setCopyCart([...cart]);
-
-	const clearCartCopy = () => setCopyCart([]); 
-
-	const totalPriceCopy = () => copyCart.reduce((prev, act) => prev + act.quantity * act.precio, 0);
-
 	return (
 		<CartContext.Provider
 			value={{
@@ -47,11 +40,7 @@ const CartProvider = ({ children }) => {
 				addProduct,
 				totalPrice,
 				totalProducts,
-				completeCartCopy,
-				clearCartCopy,
-				totalPriceCopy,
 				cart,
-				copyCart
 			}}>
 			{children}
 		</CartContext.Provider>
