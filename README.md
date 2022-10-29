@@ -8,9 +8,10 @@ Desarrollado con React, con el fin de completar el curso de React dictado y diri
 
 ## Dependencias instaladas
 
-- [react-router-dom] versión 6.4.1. Link: [https://v5.reactrouter.com/](https://v5.reactrouter.com/).
-- [firebase] versión 9.12.1. Link: [https://firebase.google.com/](https://firebase.google.com/).
-- [sweetalert2] versión 11.4.37 Link: [https://sweetalert2.github.io/](https://sweetalert2.github.io/).
+- [react-router-dom] versión: 6.4.1. Link: [https://v5.reactrouter.com/](https://v5.reactrouter.com/). Vital para la entrega, utilizado para la navegabilidad.
+- [firebase] versión: 9.12.1. Link: [https://firebase.google.com/](https://firebase.google.com/). Vital para la entrega, utilizando Cloud Firestore, que es una base de datos NoSQL alojada en la nube.
+- [sweetalert2] versión: 11.4.37 Link: [https://sweetalert2.github.io/](https://sweetalert2.github.io/). Muy útil para mostrar notificaciones, como por ejemplo, la compra completada, fue utilizada para tal fin.
+- [luxon] version: 3.0.4. Link: [https://moment.github.io/luxon/#/](https://moment.github.io/luxon/#/). Muy útil para el manejo de fechas y horas, utilizado para tal fin.
 
 ## Demo
 

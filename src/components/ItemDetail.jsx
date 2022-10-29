@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 export const ItemDetail = ({ data }) => {
 	const [goToCart, setGoToCart] = useState(false);

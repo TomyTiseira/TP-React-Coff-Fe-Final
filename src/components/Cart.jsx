@@ -17,6 +17,15 @@ const Cart = () => {
 		);
 	}
 
+	const cantidadProductos = () => {
+		let cantidad = 0;
+		for (let i=0; i<cart.length; i++) {
+			cantidad += cart[i].quantity;
+		}
+
+		return cantidad;
+	}
+
 	return (
 		<div id="carrito">
 			<Title greeting="Carrito"/>
@@ -24,8 +33,9 @@ const Cart = () => {
 				{cart.map((product) => (
 					<ItemCart key={product.id} product={product}/>
 				))}
+				<p className="text-p m-auto bg px-5 py-3 fs-5">Cantidad de productos: <span className="fs-6">{cantidadProductos()}</span></p>
 				<p className="text-p m-auto bg px-5 py-3 fs-5">Total: <span className="fs-6">${totalPrice()}</span></p>
-				<Link to="/checkout" className="my-auto"><button className="boton-a">Emitir compra</button></Link>
+				<Link to="/cart/checkout" className="my-auto"><button className="boton-a">Emitir compra</button></Link>
 			</div>
 		</div>
 	);

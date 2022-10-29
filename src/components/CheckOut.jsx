@@ -3,7 +3,8 @@ import { useCartContext } from "../context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import Title from './Title';
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { DateTime } from "luxon";
 
 const CheckOut = () => {
     const [ ordenCreada, setOrdenCreada ] = useState(false);
@@ -29,6 +30,8 @@ const CheckOut = () => {
 			precio: product.precio,
 			quantity: product.quantity,
 		})),
+        estado: "generada",
+        fecha: DateTime.now().toLocaleString(),
 		total: totalPrice(),
 	};
 
@@ -45,14 +48,13 @@ const CheckOut = () => {
 
     // Función que guarda en DB la orden, limpia el carrito y lo clona para mostrar el clonado en el detalle de la compra (borrado por temas de seguridad del sistema).
 	const handleClick = () => {
-        console.log(order)
 		const db = getFirestore();
 		const ordersCollection = collection(db, "orders");
 		addDoc(ordersCollection, order).then(() => {
 			clearCart();
 			setTimeout(() => {
 				alertaCompraRealizada();
-			}, 300);			
+			}, 200);			
 		});		
 	};
 
@@ -85,12 +87,12 @@ const CheckOut = () => {
     }
 
     // Cards de los productos que compró el cliente.
-    const cardsProductos = cart.map(film => {
+    const cardsProductos = cart.map(product => {
 		return(
-            <div key={film.id} className='box-grid text-center bg'>
-                <h3 className="fs-5 py-2 col">{film.nombre}</h3>
-                <div className='fs-6'>Precio unitario: <span>${film.precio}</span></div>
-                <div className='fs-6'>Cantidad: <span>{film.quantity}</span></div>
+            <div key={product.id} className='box-grid text-center bg'>
+                <h3 className="fs-5 py-2 col">{product.nombre}</h3>
+                <div className='fs-6'>Precio unitario: <span>${product.precio}</span></div>
+                <div className='fs-6'>Cantidad: <span>{product.quantity}</span></div>
             </div>
         );
 	});
